@@ -2,10 +2,13 @@ let currentInput = '';
 const inputField = document.getElementById('hiddenInput');
 const display = document.getElementById('display');
 
-// Nasconde il campo input
+// Nasconde il campo input ma permette il focus
 inputField.style.opacity = 0;
 inputField.style.position = 'absolute';
 inputField.style.zIndex = -1;
+inputField.style.height = '1px'; // compatibilità iOS
+inputField.style.width = '1px';
+inputField.style.border = 'none';
 
 // Funzione per aggiornare il display
 function handleInput(key) {
@@ -26,18 +29,25 @@ function handleInput(key) {
   }
 }
 
-// Supporto per dispositivi mobili
+// Input da tastiera virtuale (mobile)
 inputField.addEventListener('input', function() {
   const key = inputField.value.slice(-1);
   handleInput(key);
   inputField.value = '';
 });
 
-// Supporto per tastiera fisica
+// Input da tastiera fisica (PC)
 document.addEventListener('keydown', function(event) {
-  // Solo se il campo input NON ha il focus (es. al primo avvio)
   if (document.activeElement !== inputField) {
     handleInput(event.key);
-    event.preventDefault(); // Previene che il tasto venga inserito nel campo
+    event.preventDefault();
   }
+});
+
+// Attiva il campo input su tap per mostrare la tastiera
+document.body.addEventListener('click', () => {
+  inputField.focus();
+});
+document.body.addEventListener('touchstart', () => {
+  inputField.focus();
 });
