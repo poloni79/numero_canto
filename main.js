@@ -35,5 +35,9 @@ inputField.addEventListener('input', function() {
 
 // Supporto per tastiera fisica
 document.addEventListener('keydown', function(event) {
-  handleInput(event.key);
+  // Solo se il campo input NON ha il focus (es. al primo avvio)
+  if (document.activeElement !== inputField) {
+    handleInput(event.key);
+    event.preventDefault(); // Previene che il tasto venga inserito nel campo
+  }
 });
