@@ -2,14 +2,6 @@ let currentInput = '';
 const inputField = document.getElementById('hiddenInput');
 const display = document.getElementById('display');
 
-// Nasconde il campo input ma permette il focus
-inputField.style.opacity = 0;
-inputField.style.position = 'absolute';
-inputField.style.zIndex = -1;
-inputField.style.height = '1px'; // compatibilità iOS
-inputField.style.width = '1px';
-inputField.style.border = 'none';
-
 // Funzione per aggiornare il display
 function handleInput(key) {
   if (!isNaN(key) && key >= '0' && key <= '9') {
