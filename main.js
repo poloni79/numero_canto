@@ -7,8 +7,10 @@ function handleInput(key) {
   if (!isNaN(key) && key >= '0' && key <= '9') {
     currentInput += key;
 
-    if (currentInput.length > 3) {
-      currentInput = currentInput.slice(-3);
+    if (currentInput.length === 4) {
+      display.textContent = '';
+      currentInput = '';
+      return;
     }
 
     if (currentInput === '000') {
