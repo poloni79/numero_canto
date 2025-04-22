@@ -14,7 +14,7 @@ body {
 }
 
 #display {
-  color: white;
+  color: red;
   font-size: 35vw;
   font-family: 'dy7seg', monospace;
   text-align: center;
