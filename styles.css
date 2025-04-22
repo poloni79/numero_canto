@@ -10,9 +10,10 @@ body {
 
 #display {
   color: white;
-  font-size: 30vw;
+  font-size: 35vw;
   font-family: 'Arial', sans-serif;
   text-align: center;
+  font-weight: bold;
 }
 
 #hiddenInput {
