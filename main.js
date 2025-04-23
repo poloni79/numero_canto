@@ -5,15 +5,19 @@ const display = document.getElementById('display');
 // Funzione per aggiornare il display
 function handleInput(key) {
   if (!isNaN(key) && key >= '0' && key <= '9') {
-    currentInput += key;
+    if (currentInput === '0') {
+      currentInput = key; // rimpiazza lo zero con il nuovo numero
+    } else {
+      currentInput += key;
+    }
 
     if (currentInput.length === 4) {
       display.textContent = '';
       currentInput = '';
       return;
     }
-
-    if (currentInput === '000') {
+	
+	if (currentInput === '000') {
       display.textContent = '';
       currentInput = '';
     } else {
