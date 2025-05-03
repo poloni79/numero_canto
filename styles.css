@@ -1,16 +1,20 @@
 @font-face {
   font-family: 'dy7seg';
-  src: url('dy7seg.ttf') format('truetype');
+  src: url('dy7seg_subset.woff2') format('woff2');
+  font-display: swap;
 }
 
 body {
   margin: 0;
-  background-color: black;
+  padding: 0;
+  background-color: #000;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   position: relative;
+  cursor: none;
+  overflow: hidden;
 }
 
 #display {
@@ -19,14 +23,6 @@ body {
   font-family: 'dy7seg', monospace;
   text-align: center;
   font-weight: bold;
-}
-
-#hiddenInput {
-  position: absolute;
-  opacity: 0;
-  font-size: 16px;
-  height: 20px;
-  width: 60px;
-  border: none;
-  background: transparent;
+  line-height: 1;
+  user-select: none;
 }
