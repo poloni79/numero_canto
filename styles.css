@@ -1,28 +1,31 @@
+/* Definizione di un font personalizzato */
 @font-face {
-  font-family: 'dy7seg';
-  src: url('dy7seg_subset.woff2') format('woff2');
-  font-display: swap;
+  font-family: 'dy7seg';							/* Nome del font */
+  src: url('dy7seg_subset.woff2') format('woff2');	/* File del font e formato */
+  font-display: swap;								/* Usa altro font finché non caricato */
 }
 
+/* Definizione del corpo*/
 body {
-  margin: 0;
-  padding: 0;
-  background-color: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  position: relative;
-  cursor: none;
-  overflow: hidden;
+  margin: 0;										/* Margini = 0 */
+  padding: 0;										/* Margini = 0 */
+  background-color: #000;							/* Sfondo nero */
+  display: flex;									/* Usa flexbox */
+  justify-content: center;							/* Testo centrato orizzontalmente */
+  align-items: center;								/* Testo centrato verticalmente */
+  height: 100vh;									/* Altezza 100% dello schermo */
+  position: relative;								/* Posizionamenti interni relativi */
+  cursor: none;										/* Cursore del mouse nascosto */
+  overflow: hidden;									/* Impedisce lo scroll fuori body */
 }
 
+/* Definizione del contenuto */
 #display {
-  color: red;
-  font-size: 35vw;
-  font-family: 'dy7seg', monospace;
-  text-align: center;
-  font-weight: bold;
-  line-height: 1;
-  user-select: none;
+  color: red;										/* Testo rosso */
+  font-size: 35vw;									/* Altezza testo */
+  font-family: 'dy7seg', monospace;					/* Usa font dy7seg, altrimenti mono */
+  text-align: center;								/* Testo centrato */
+  font-weight: bold;								/* Carattere in grassetto */
+  line-height: 1;									/* Altezza linea 1 */
+  user-select: none;								/* Testo non selezionabile */
 }

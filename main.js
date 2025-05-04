@@ -23,15 +23,15 @@ function handleInput(key) {
 
     // Reset alla 4a cifra
     if (currentInput.length === 4) {
-      display.textContent = '';
       currentInput = '';
+      display.textContent = '___';
       return;
     }
 
-    // Reset con codice speciale '000'
-    if (currentInput === '000') {
-      display.textContent = '';
+    // Gestione dei codici '0', '00' e '000'
+    if ((currentInput === '0') || (currentInput === '00') || (currentInput === '000')) {
       currentInput = '';
+      display.textContent = '___';
       return;
     }
 
