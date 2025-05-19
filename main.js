@@ -3,7 +3,7 @@ const display = document.getElementById('display');
 
 // Schermata d'avvio dello script
 display.innerHTML = `
-  <div style="font-size: 5vw;">
+  <div style="font-size: 4vw;">
     Premi due volte <br>
     una FRECCIA della<br>
     tastiera per iniziare
